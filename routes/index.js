@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line no-unused-vars, import/no-unresolved
 import { Express } from 'express';
 import AppController from '../controllers/AppController';
 import AuthController from '../controllers/AuthController';
