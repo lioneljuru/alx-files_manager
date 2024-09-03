@@ -1,5 +1,6 @@
 import { promisify } from 'util';
 import { createClient } from 'redis';
+
 /**
  * Represents a Redis client,
  */
@@ -35,6 +36,7 @@ class RedisClient {
   async get(key) {
     return promisify(this.client.GET).bind(this.client)(key);
   }
+  
   /**
    * Stores a key and its value along with an expiration time.
    * @param {String} key The key of the item to store.
