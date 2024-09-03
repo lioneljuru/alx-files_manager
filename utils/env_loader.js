@@ -19,4 +19,4 @@ const envLoader = () => {
 	}
 };
 
-export default envloaserl;
+export default envLoader;
