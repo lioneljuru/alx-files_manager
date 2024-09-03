@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Request, Response, NextFunction } from 'express';
 
 /**
@@ -10,6 +11,7 @@ export class APIError extends Error {
     this.message = message;
   }
 }
+
 /**
  * Applies Basic authentication to a route.
  * @param {Error} err The error object.
