@@ -7,9 +7,9 @@ import envLoader from '/env_loader';
  * Represents a MongoDB client.
  */
 class DBclient {
-	/**
-	 * Creates a new DBClient inantce.
-	 */
+  /**
+  * Creates a new DBClient inantce.
+  */
   constructor() {
     envLoader();
     const host = process.env.DB_HOST || 'localhost';
