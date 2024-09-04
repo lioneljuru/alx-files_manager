@@ -1,15 +1,16 @@
+/* eslint-disable import/no-unresolved */
 import mongodb from 'mongodb';
 // eslint-disable-next-line no-unused-vars
 import Collection from 'mongodb/lib/collection';
-import envLoader from '/env_loader';
+import envLoader from './env_loader';
 
 /**
  * Represents a MongoDB client.
  */
-class DBclient {
+class DBClient {
   /**
-  * Creates a new DBClient inantce.
-  */
+   * Creates a new DBClient instance.
+   */
   constructor() {
     envLoader();
     const host = process.env.DB_HOST || 'localhost';
@@ -22,7 +23,7 @@ class DBclient {
   }
 
   /**
-   * Checks if this client's connection to the MongoDB server is active
+   * Checks if this client's connection to the MongoDB server is active.
    * @returns {boolean}
    */
   isAlive() {
@@ -36,7 +37,7 @@ class DBclient {
   async nbUsers() {
     return this.client.db().collection('users').countDocuments();
   }
-  
+
   /**
    * Retrieves the number of files in the database.
    * @returns {Promise<Number>}
@@ -52,10 +53,10 @@ class DBclient {
   async usersCollection() {
     return this.client.db().collection('users');
   }
-  
+
   /**
    * Retrieves a reference to the `files` collection.
-   * @returns {promise<Collection>}
+   * @returns {Promise<Collection>}
    */
   async filesCollection() {
     return this.client.db().collection('files');
